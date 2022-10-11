@@ -1,1 +1,31 @@
-https://vkc.sh/feed/
+####################
+# Youtube Channels #
+####################
+
+
+# Tech
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw" tech
+https://hnrss.org/newest?points=100 "~Hacker News" tech
+
+# Gaming
+https://www.escapistmagazine.com/?feed=rss "~Escapist Magazine" gaming
+https://www.rockpapershotgun.com/rss "~Rock Paper Shotgun" gaming
+https://store.steampowered.com/feeds/news.xml "~Steam RSS" gaming
+https://indiegamesplus.com/feed/ "~Indie Games Plus" gaming
+https://www.polygon.com/rss/index.xml "~Polygon" gaming
+https://www.eurogamer.net/feed "~Euro Gamer" gaming
+http://feeds.ign.com/ign/all "~IGN" gaming
+https://kotaku.com/rss "~Kotaku" gaming
+
+# News
+https://www.theguardian.com/world/italy/rss "~The Guardian" news
+https://www.repubblica.it/rss/homepage/rss2.0.xml "~Repubblica.it" news
+
+# Science
+https://www.nasa.gov/rss/dyn/breaking_news.rss "~Nasa" science 
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>RSS starter pack</title>
+    <dateCreated>Sat, 08 Sep 2018 14:28:08 -0500</dateCreated>
+    <ownerEmail>nobody_in_particular@example.com</ownerEmail>
+  </head>
+  <body>
+    <outline text="Podcast Spectacular" title="Podcast Spectacular">
+<outline text="Revolutions" title="Revolutions" type="rss" xmlUrl="http://revolutionspodcast.libsyn.com/rss" htmlUrl="http://www.revolutionspodcast.com"/>
+<outline text="Twenty Thousand Hertz" title="Twenty Thousand Hertz" type="rss" xmlUrl="https://www.20k.org/home?format=RSS" htmlUrl="https://www.20k.org/"/>
+<outline text="Twenty Thousand Hertz" title="Twenty Thousand Hertz" type="rss" xmlUrl="http://feeds.megaphone.fm/20k" htmlUrl="http://www.20k.org"/>
+<outline text="The Magnus Archives" title="The Magnus Archives" type="rss" xmlUrl="http://rss.acast.com/themagnusarchives" htmlUrl="http://www.acast.com/themagnusarchives"/>
+<outline text="Noclip" title="Noclip" type="rss" xmlUrl="http://noclippodcast.libsyn.com/rss" htmlUrl="https://www.noclip.video"/>
+<outline text="The Podcast - Lore" title="The Podcast - Lore" type="rss" xmlUrl="https://www.lorepodcast.com/episodes?format=RSS" htmlUrl="https://www.lorepodcast.com/episodes/"/>
+<outline text="Uncanny Japan - Folklore and Culture" title="Uncanny Japan - Folklore and Culture" type="rss" xmlUrl="http://www.uncannyjapan.com/feed/podcast/" htmlUrl="http://www.uncannyjapan.com"/>
+<outline text="Darknet Diaries" title="Darknet Diaries" type="rss" xmlUrl="https://darknetdiaries.com/podcast.xml" htmlUrl="https://darknetdiaries.com/"/>
+<outline text="Plumbing the Death Star" title="Plumbing the Death Star" type="rss" xmlUrl="https://rss.acast.com/plumbingthedeathstar" htmlUrl="http://www.sanspantsradio.com/plumbing-the-death-star/"/>
+    </outline>
+  </body>
+</opml>
