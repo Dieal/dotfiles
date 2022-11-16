@@ -57,6 +57,8 @@ return packer.startup(function(use)
   -- Utils
   use "jghauser/mkdir.nvim" -- Creates directories when they don't exist (like mkdir -p)
   use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end } -- Auto pair brackets
+  use 'nvim-tree/nvim-web-devicons'
+  use 'matbme/JABS.nvim' -- Just Another Buffer Switcher is a minimal buffer switcher window for Neovim written.
 
   -- Completion
   use "hrsh7th/nvim-cmp" -- The completion plugin
