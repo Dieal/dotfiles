@@ -1,0 +1,5 @@
+# It gives informations about names to fill in the config file
+fc-list : family style | grep [font name]
+
+#
+My fix was to write "Hack Nerd Font" instead of "Hack" in the alacritty.yml 
