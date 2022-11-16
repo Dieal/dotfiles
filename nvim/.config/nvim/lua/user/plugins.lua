@@ -45,9 +45,18 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use "glepnir/dashboard-nvim" -- Cool Dashboard
-  use "jghauser/mkdir.nvim"
-  use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
+
+  -- GUI
+  use "glepnir/dashboard-nvim" -- Cool configurable dashboard
+
+  -- Colorschemes
+  use "Th3Whit3Wolf/one-nvim"
+  use "lunarvim/colorschemes"
+  use "folke/tokyonight.nvim"
+
+  -- Utils
+  use "jghauser/mkdir.nvim" -- Creates directories when they don't exist (like mkdir -p)
+  use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end } -- Auto pair brackets
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

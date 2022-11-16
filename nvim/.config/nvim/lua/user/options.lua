@@ -14,6 +14,7 @@ local options = {
     number = true,          -- set numbered lines
     relativenumber = true,  -- set relative numbered lines
     scrolloff = 8,
+    termguicolors = true,   -- enables terminal gui colors
 
 }
 
