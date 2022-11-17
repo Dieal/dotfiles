@@ -60,12 +60,19 @@ return packer.startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use 'matbme/JABS.nvim' -- Just Another Buffer Switcher is a minimal buffer switcher window for Neovim written.
 
+  -- LSP
+  use "neovim/nvim-lspconfig" -- LSP 
+  use "williamboman/mason.nvim" -- LSP Installer
+  use "williamboman/mason-lspconfig.nvim"
+  use "jose-elias-alvarez/null-ls.nvim"
+
   -- Completion
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
