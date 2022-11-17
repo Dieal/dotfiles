@@ -1,0 +1,29 @@
+# Leader key
+<leader> = space
+
+# LSP Navigation
+gD = lsp declaration
+gd = see definition
+K = see more information
+gi =
+
+# Buffer navigation
+<S-q> = closes buffer
+<S-j>
+<S-k>
+
+# JABS (Just Another Buffer Switcher)
+<leader>x = opens buffers window
+<j> and <k> = move cursor in buffers window
+<space> = open buffer
+
+# Window navigation
+<C-j>
+<C-k>
+<C-l>
+<C-h>
+
+# Netrw
+<leader>e = opens netrw
+
+
