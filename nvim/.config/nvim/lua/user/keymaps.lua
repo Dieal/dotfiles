@@ -35,7 +35,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 -- Buffer Controls
 keymap("n", "<S-l>", ":bnext<CR>", opts) -- Next buffer
 keymap("n", "<S-h>", ":bprevious<CR>", opts) -- Previous buffer
-keymap("n", "<S-q>", ":Bdelete!<CR>", opts) -- Closes buffer
+keymap("n", "<S-q>", ":bdelete!<CR>", opts) -- Closes buffer
 
 -- Insert mode
 
