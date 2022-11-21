@@ -1,3 +1,4 @@
+-- M is something that I'm gonna return
 local M = {}
 
 -- TODO: backfill this to template
@@ -23,6 +24,8 @@ M.setup = function()
     update_in_insert = true,
     underline = true,
     severity_sort = true,
+
+    -- Diagnostic Window
     float = {
       focusable = false,
       style = "minimal",
@@ -35,6 +38,7 @@ M.setup = function()
 
   vim.diagnostic.config(config)
 
+  -- Rounded borders for 'K' key window
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
     border = "rounded",
   })
