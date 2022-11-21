@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Aliases
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias games='cd ~/games/installati/'
 alias gamesdl='cd ~/games/downloads/'
 
