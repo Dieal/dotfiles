@@ -59,6 +59,7 @@ return packer.startup(function(use)
   use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end } -- Auto pair brackets
   use 'nvim-tree/nvim-web-devicons'
   use 'matbme/JABS.nvim' -- Just Another Buffer Switcher is a minimal buffer switcher window for Neovim written.
+  use 'lewis6991/impatient.nvim' -- Makes neovim faster
 
   -- LSP
   use "neovim/nvim-lspconfig" -- LSP 
