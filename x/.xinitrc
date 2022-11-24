@@ -1,5 +1,5 @@
 # Sets background
-feh --bg-scale /home/chilling/documents/wallpapers/Wallpaper2.png
+feh --bg-scale /home/chilling/documents/wallpapers/wallpaper2.jpg
 
 # Starts dwm
 exec dwm
