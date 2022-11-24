@@ -1,0 +1,18 @@
+// Programs to install
+
+// Arch Repository Programs
+tealdeer = gives you lots of examples about a command
+thunar = GUI File Manager
+stow = managers soft links
+cmus = terminal music player
+zathura = pdf and ebook reader
+flameshot = screenshot tool
+
+// Others
+protonup-qt = updates wine-ge versions on lutris
+tartube = youtube downloader front end
+sherlock.py = finds accound on multiple social medias
+
+
+
+
