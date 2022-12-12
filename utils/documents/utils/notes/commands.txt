@@ -1,4 +1,0 @@
-// Useful Commands
-curl cheat.sh/[command] = gives you A LOT of information and examples about a command
-
-ls -l /dev/sd? = quickly lists connected devices

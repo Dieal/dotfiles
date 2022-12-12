@@ -1,0 +1,24 @@
+// Sessions details
+"last" = list of last logged in users (stored in /var/log/wtmp)
+
+"w" = information including username, terminal, IP number of the source computer, login time, any idle time, process CPU cycles, 
+      job CPU cycles, and the currently running command,
+
+"who" = summary of logged in users
+
+// CPU and Memory
+free = displays RAM usage
+
+// Processes
+pgrep [nomeFile] = gets PID of a process by its file
+
+// Commands details
+"curl cheat.sh/[command]" = gives you A LOT of information and examples about a command
+
+// Devices
+"ls -l /dev/sd?" = quickly lists connected devices
+
+// Coding
+"archlinux-java <command>" = lets you select between different java environments
+
+"xset r rate 300 50" = increases terminal cursor speed
