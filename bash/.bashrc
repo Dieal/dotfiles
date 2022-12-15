@@ -10,6 +10,7 @@ alias ls='ls --color=auto --group-directories-first'
 alias games='cd ~/games/installati/'
 alias gamesdl='cd ~/games/downloads/'
 alias dotf='cd ~/.dotfiles/'
+alias disk='cd /mnt/disk/'
 
 # Startup Scripts. Located in ~/.local/bin/
 remaps
