@@ -1,0 +1,7 @@
+alacritty
+scripts
+fonts
+xdg
+bash
+newsboat
+x
