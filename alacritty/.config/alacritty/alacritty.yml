@@ -127,7 +127,7 @@ font:
     family: "Hack Nerd Font"
     style: Bold Italic
 
-  size: 16
+  size: 11
 
 # Creates new alacritty istance in the same directory by pressing [Ctrl-Shift-Enter]
 key_bindings:
