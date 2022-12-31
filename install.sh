@@ -13,7 +13,6 @@ function check_prog() {
 
 
 mkdir -p "$HOME/.config"
-mkdir -p "$HOME/programs"
 
 #########################################################################
 
@@ -33,17 +32,9 @@ check_prog curl
 check_prog git
 
 # DWM Installation
-read -p 'Do you want to install dwm? (y/n): ' dwm
-if [ $dwm == 'y' ]; then
-    # git clone git://git.suckless.org/dwm $HOME/programs/dwm
-    # cp dwm/config.h $HOME/programs/dwm
-    # cd $HOME/programs/dwm
-    # make
-    # sudo make install
+dwm/install.sh
 
-    echo -e "\n#DWM Execution\nexec dwm" >> $HOME/.dotfiles/x/.xinitrc
-    echo -e "DWM successfuly installed\n"
-fi
+cd $HOME/.dotfiles/
 
 # Install config files with stow
 configs="alacritty scripts fonts xdg bash newsboat x"

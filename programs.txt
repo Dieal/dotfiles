@@ -38,3 +38,4 @@ thunar
 neovim
 dust
 nitrogen
+tree
