@@ -2,4 +2,5 @@ newsboat/.newsboat/urls
 newsboat/.newsboat/files
 newsboat/.newsboat/cache.db
 newsboat/.newsboat/history.search
+backup/
 

@@ -18,7 +18,7 @@ if [ $dwm == 'y' ]; then
 
     # Checks that the command above ran successfully
     if [ $? -eq 0 ]; then
-        echo -e "\n#DWM Execution\nexac dwm" >> $HOME/.dotfiles/x/.xinitrc
+        sudo echo -e "\n#DWM Execution\nexac dwm" >> $HOME/.dotfiles/x/.xinitrc
         echo -e "\nDWM successfully installed\n"
     else
         echo -e "\nDWM was not installed"
