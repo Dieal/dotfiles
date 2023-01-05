@@ -39,3 +39,4 @@ neovim
 dust
 nitrogen
 tree
+foliate

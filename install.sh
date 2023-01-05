@@ -52,6 +52,7 @@ if [ $dotf_answer == "y" ]; then
 fi
 
 # Install nvim config
+sudo pacman -S ripgrep fd # Dependencies for Telescope
 if [ ! -d "$HOME/.config/nvim" ]; then
     git clone https://github.com/Dieal/nvim-config.git $HOME/.config/nvim
 else

@@ -3,6 +3,7 @@
 #
 
 export PATH=$HOME/.local/bin:$PATH
+export EDITOR=/usr/bin/vim
 
 #NPM
 NPM_PACKAGES="${HOME}/.npm-packages"
