@@ -1,0 +1,4 @@
+/usr/lib/kdeconnectd &
+setxkbmap -layout "it" -option caps:escape &
+redshift -l 41.89193:12.51133 &
+exec awesome

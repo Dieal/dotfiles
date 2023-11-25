@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[submodule]
+	active = .
+[branch "main"]
+	remote = git@github.com:Dieal/awesomevm-config.git
+	merge = refs/heads/main
+[submodule "freedesktop"]
+	url = https://github.com/lcpz/awesome-freedesktop.git
+[submodule "lain"]
+	url = https://github.com/lcpz/lain.git
+[remote "origin"]
+	url = git@github.com:Dieal/awesomevm-config.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
