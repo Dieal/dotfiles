@@ -1,5 +1,0 @@
-0000000000000000000000000000000000000000 305b788e22b958e7755945fa09ec40f2d0010227 Dieal <59124097+Dieal@users.noreply.github.com> 1694602341 +0200	clone: from https://github.com/Dieal/nvim-config
-305b788e22b958e7755945fa09ec40f2d0010227 0ce32e42a6d4539ec0684dc709eebfa499603b2d Dieal <59124097+Dieal@users.noreply.github.com> 1697830506 +0200	commit: Add stuff
-0ce32e42a6d4539ec0684dc709eebfa499603b2d 91e3b2311f4df30523f1e6bf3433f5fb6c0e139b Dieal <59124097+Dieal@users.noreply.github.com> 1697973323 +0200	commit: Add plugin: labs.nvim
-91e3b2311f4df30523f1e6bf3433f5fb6c0e139b a2a3766f07170acc5b4dc5752353164fadbcfc45 Dieal <59124097+Dieal@users.noreply.github.com> 1698342174 +0200	commit: Fix a plugin and add VimWiki + Markdown Preview
-a2a3766f07170acc5b4dc5752353164fadbcfc45 e86027930c9b92876980f2b12ebfadb7a7b5ebc7 Dieal <59124097+Dieal@users.noreply.github.com> 1698342279 +0200	commit: Add some LSP Configurations
