@@ -29,6 +29,8 @@ return {
       -- loads vscode style snippets from installed plugins
       require('luasnip.loaders.from_vscode').lazy_load()
 
+      -- custom snippets
+
       -- Extend snippets
       -- filetype_extend (filetype, snippets)
       require'luasnip'.filetype_extend("php", {"html"})
