@@ -4,8 +4,6 @@ return {
     'hrsh7th/nvim-cmp',
     event = "InsertEnter", -- Lazy loading when entering in insert mode
     dependencies = {
-      -- Snippet Engine & its associated nvim-cmp source
-      'L3MON4D3/LuaSnip',
       'saadparwaiz1/cmp_luasnip',
 
       -- Adds LSP completion capabilities
@@ -15,27 +13,13 @@ return {
 
       -- LSP Pittograms
       'onsails/lspkind.nvim',
-
-      -- Adds a number of user-friendly snippets
-      'rafamadriz/friendly-snippets',
     },
 
     -- See `:help cmp`
     config = function()
       local cmp = require 'cmp'
-      local luasnip = require 'luasnip'
       local lspkind = require('lspkind')
-
-      -- loads vscode style snippets from installed plugins
-      require('luasnip.loaders.from_vscode').lazy_load()
-
-      -- custom snippets
-
-      -- Extend snippets
-      -- filetype_extend (filetype, snippets)
-      require'luasnip'.filetype_extend("php", {"html"})
-      require'luasnip'.filetype_extend("typescript", {"javascript"})
-      luasnip.config.setup {}
+      local luasnip = require 'luasnip'
 
       cmp.setup {
         completion = { -- How the completion menu works
@@ -59,10 +43,6 @@ return {
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
           ['<C-Space>'] = cmp.mapping.complete {}, -- Open nvim-cmp suggestion
           ['<C-e>'] = cmp.mapping.abort {}, -- Close window
-          -- ['<CR>'] = cmp.mapping.confirm {
-          --   behavior = cmp.ConfirmBehavior.Replace,
-          --   select = true,
-          -- },
           ["<CR>"] = cmp.mapping({ -- Safely select entries with <CR> (If nothing is selected add a newline as usual.)
             i = function(fallback)
               if cmp.visible() and cmp.get_active_entry() then
@@ -75,6 +55,11 @@ return {
             c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
           }),
           ['<Tab>'] = cmp.mapping(function(fallback)
+            local ok, _ = pcall(require, 'luasnip')
+            if not ok then
+              return
+            end
+
             if cmp.visible() then
               cmp.select_next_item()
             elseif luasnip.expand_or_locally_jumpable() then
@@ -84,6 +69,11 @@ return {
             end
           end, { 'i', 's' }),
           ['<S-Tab>'] = cmp.mapping(function(fallback)
+            local ok, _ = pcall(require, 'luasnip')
+            if not ok then
+              return
+            end
+
             if cmp.visible() then
               cmp.select_prev_item()
             elseif luasnip.locally_jumpable(-1) then
@@ -107,6 +97,7 @@ return {
           })
         },
       }
+
     end
   },
 }

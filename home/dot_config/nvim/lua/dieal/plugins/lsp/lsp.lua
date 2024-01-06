@@ -80,10 +80,11 @@ return {
       end
 
       local servers = {
+        eslint = {},
         tsserver = {},
         cssls = {},
         emmet_ls = {
-          filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+          filetypes = { "html", "javascript", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
         },
         tailwindcss = {},
         intelephense = {

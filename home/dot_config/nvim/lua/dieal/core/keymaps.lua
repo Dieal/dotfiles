@@ -32,7 +32,8 @@ vim.keymap.set('n', '<A-t>', '<CMD>lua require("FTerm").toggle()<CR>', { desc = 
 vim.keymap.set('t', '<A-t>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', { desc = '[T]oggle Terminal' })
 
 -- Split windows navigation
-vim.keymap.set('n', '<C-l>', '<CMD>wincmd l<CR>', { desc = 'Go to right split window' })
-vim.keymap.set('n', '<C-h>', '<CMD>wincmd h<CR>', { desc = 'Go to left split window' })
-vim.keymap.set('n', '<C-j>', '<CMD>wincmd j<CR>', { desc = 'Go to lower split window' })
-vim.keymap.set('n', '<C-k>', '<CMD>wincmd k<CR>', { desc = 'Go to higher split window' })
+vim.keymap.set('n', '<C-q>', '<C-w>q', { desc = 'Close window' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Go to right split window' })
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Go to left split window' })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Go to higher split window' })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Go to lower split window' })
