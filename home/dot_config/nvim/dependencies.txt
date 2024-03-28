@@ -1,0 +1,5 @@
+git
+make
+npm
+fzf
+gcc
