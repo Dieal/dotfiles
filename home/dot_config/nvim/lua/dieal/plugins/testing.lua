@@ -10,6 +10,7 @@ return {
       "nvim-neotest/neotest-jest",
       "nvim-neotest/neotest-vim-test",
     },
+    enabled = false,
     config = function ()
       local neotest = require('neotest')
 

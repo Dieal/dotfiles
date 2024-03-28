@@ -12,6 +12,7 @@ return {
     -- Extend snippets
     -- filetype_extend (filetype, snippets)
     require'luasnip'.filetype_extend("php", {"html"})
+    require'luasnip'.filetype_extend("astro", {"html"})
     require'luasnip'.filetype_extend("typescript", {"javascript"})
     luasnip.config.setup {}
 

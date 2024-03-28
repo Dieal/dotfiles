@@ -42,7 +42,7 @@ return {
           ['<C-d>'] = cmp.mapping.scroll_docs(-4),
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
           ['<C-Space>'] = cmp.mapping.complete {}, -- Open nvim-cmp suggestion
-          ['<C-e>'] = cmp.mapping.abort {}, -- Close window
+          ['<C-q>'] = cmp.mapping.abort {}, -- Close window
           ["<CR>"] = cmp.mapping({ -- Safely select entries with <CR> (If nothing is selected add a newline as usual.)
             i = function(fallback)
               if cmp.visible() and cmp.get_active_entry() then
@@ -100,4 +100,15 @@ return {
 
     end
   },
+  -- Inline Parameters
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "VeryLazy",
+    config = function ()
+      local plugin = require('lsp_signature')
+      plugin.on_attach({
+        toggle_key = '<C-s>',
+      })
+    end
+  }
 }

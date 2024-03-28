@@ -8,19 +8,12 @@ return {
   'tpope/vim-sleuth',
 
   -- Auto pair brackets
-  { 'jiangmiao/auto-pairs' },
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  },
 
-  -- File tree
-  -- { 'nvim-tree/nvim-tree.lua', config = function()
-  --   -- Disable Netwr
-  --   vim.g.loaded_netrw       = 1
-  --   vim.g.loaded_netrwPlugin = 1
-  --
-  --   -- [nvim-tree setup]
-  --   require('nvim-tree').setup();
-  --
-  --   vim.keymap.set('n', '<leader>t', vim.cmd.NvimTreeToggle, { desc = "Toggles [T]ree" })
-  -- end},
   { 'nvim-tree/nvim-web-devicons' },
 
   -- Terminal
@@ -32,6 +25,9 @@ return {
   -- Programming specific plugins
   {
     'windwp/nvim-ts-autotag',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+    },
     config = function()
       require('nvim-ts-autotag').setup();
     end

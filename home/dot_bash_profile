@@ -19,10 +19,9 @@ export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 # Lutris: skip update search
 export LUTRIS_SKIP_INIT=1
 
-
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # Starts Xorg
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-	exec startx
+exec startx
 fi

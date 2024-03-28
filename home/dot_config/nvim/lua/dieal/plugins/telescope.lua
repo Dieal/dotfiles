@@ -5,11 +5,13 @@ return {
     "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "nvim-tree/nvim-web-devicons",
+    "nvim-telescope/telescope-file-browser.nvim",
   },
   config = function()
     local telescope = require("telescope")
     local builtin = require("telescope.builtin")
     local actions = require("telescope.actions")
+    local fb_actions = require "telescope._extensions.file_browser.actions"
 
     telescope.setup({
       defaults = {
@@ -22,7 +24,40 @@ return {
           },
         },
       },
+      extensions = {
+        file_browser = {
+          theme = 'ivy',
+          hijack_netrw = true, -- disables netrw and use telescope-file-browser in its place
+        }
+      }
     })
+
+    -- To get telescope-file-browser loaded and working with telescope,
+    -- you need to call load_extension, somewhere after setup function:
+    require("telescope").load_extension "file_browser"
+
+    vim.api.nvim_set_keymap(
+      "n",
+      "<space>br",
+      ":Telescope file_browser<CR>",
+      { noremap = true, desc = "File [B]rowser from [R]oot" }
+    )
+
+    -- open file_browser with the path of the current buffer
+    vim.api.nvim_set_keymap(
+      "n",
+      "<space>bb",
+      ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+      { noremap = true, desc = "File [B]rowser from current [B]uffer"}
+    )
+
+    -- -- open file_browser with the path of the current buffer
+    -- vim.api.nvim_set_keymap(
+    --   "n",
+    --   "<space>fb",
+    --   ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+    --   { noremap = true }
+    -- )
 
     -- Enable telescope fzf native, if installed
     pcall(telescope.load_extension, 'fzf')
