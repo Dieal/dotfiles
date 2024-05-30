@@ -7,6 +7,9 @@ return {
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- Saves / Restores Sessions
+  'tpope/vim-obsession',
+
   -- Auto pair brackets
   {
     'windwp/nvim-autopairs',
@@ -19,8 +22,11 @@ return {
   -- Terminal
   { 'numToStr/FTerm.nvim', },
 
-  -- Discord Rich Presence
-  { 'andweeb/presence.nvim' },
+  -- -- Discord Rich Presence
+  -- { 'andweeb/presence.nvim' },
+
+  -- Abolish.vim, to keep case when substituting words
+  { 'tpope/vim-abolish' },
 
   -- Programming specific plugins
   {

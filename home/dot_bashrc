@@ -8,5 +8,13 @@
 # Aliases
 alias ls='ls --color=auto --group-directories-first'
 alias firefox='MOZ_USE_XINPUT2=1 firefox'
+alias fzfs='cd $(find ~/* -type d | fzf)'
+
+# Chezmoi Aliases
+alias cz='chezmoi'
+alias czapp='chezmoi apply'
+alias cze='chezmoi edit'
+alias czadd='chezmoi add'
+alias czc='chezmoi cd'
 
 setxkbmap -layout "it" -option caps:escape

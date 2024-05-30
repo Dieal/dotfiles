@@ -1,4 +1,4 @@
-local util_functions = {
+local util = {
   nmap = function (keys, func, desc)
     vim.keymap.set('n', keys, func, { desc = desc })
   end,
@@ -10,4 +10,4 @@ local util_functions = {
   end,
 }
 
-return util_functions
+return util

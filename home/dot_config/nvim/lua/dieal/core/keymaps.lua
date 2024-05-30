@@ -6,6 +6,14 @@ vim.g.maplocalleader = ' '
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Yanking
+vim.keymap.set("n", '<leader>y', '"+yy', { desc = "Yank to system clipboard "})
+vim.keymap.set("v", '<leader>y', '"+y', { desc = "Yank to system clipboard "})
+
+-- Capitalize
+vim.keymap.set("n", '<leader>cp', "<CMD>s/\\<./\\u&/g<CR>", { desc = "[C]a[P]italize Each Word in line"})
+vim.keymap.set("v", '<leader>cp', "<CMD>s/\\<./\\u&/g<CR>", { desc = "[C]a[P]italize Each Word in selection"})
+
 -- Center Cursor
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")

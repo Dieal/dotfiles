@@ -35,12 +35,19 @@ return {
       local servers = {
         eslint = {},
         tsserver = {},
+        dockerls = {},
         cssls = {},
+        marksman = {},
+        ansiblels = {},
+        yamlls = {},
         emmet_ls = {
           filetypes = { "html", "javascript", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte", "astro" },
         },
         tailwindcss = {},
         intelephense = {
+          filetypes = { "php" }
+        },
+        phpactor = {
           filetypes = { "php" },
         },
         html = {

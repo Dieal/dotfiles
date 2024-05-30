@@ -9,6 +9,9 @@ vim.o.hlsearch = false
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- Automatically changes directory when switching terminal buffers
+vim.o.autochdir = true
+
 -- Scroll
 vim.opt.scrolloff = 8;
 

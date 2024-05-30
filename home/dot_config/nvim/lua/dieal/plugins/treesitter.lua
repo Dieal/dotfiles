@@ -13,7 +13,19 @@ return {
       require('nvim-treesitter.configs').setup {
 
         -- Add languages to be installed here that you want installed for treesitter
-        ensure_installed = { 'c', 'cpp', 'html', 'lua', 'typescript', 'vimdoc', 'vim', 'css', 'javascript' },
+        ensure_installed = {
+          'c',
+          'cpp',
+          'php',
+          'html',
+          'lua',
+          'typescript',
+          'vimdoc',
+          'vim',
+          'css',
+          'javascript',
+          'markdown',
+        },
 
         auto_install = false,
 
@@ -22,7 +34,7 @@ return {
         highlight = { enable = true },
         indent = {
           enable = true,
-          disable = {'dart'},
+          disable = {'dart, php, yaml, yml'},
         },
         incremental_selection = {
           enable = true,
@@ -33,50 +45,50 @@ return {
             node_decremental = '<M-space>',
           },
         },
-        -- textobjects = {
-        --   select = {
-        --     enable = true,
-        --     lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-        --     keymaps = {
-        --       -- You can use the capture groups defined in textobjects.scm
-        --       ['aa'] = '@parameter.outer',
-        --       ['ia'] = '@parameter.inner',
-        --       ['af'] = '@function.outer',
-        --       ['if'] = '@function.inner',
-        --       ['ac'] = '@class.outer',
-        --       ['ic'] = '@class.inner',
-        --     },
-        --   },
-        --   move = {
-        --     enable = true,
-        --     set_jumps = true, -- whether to set jumps in the jumplist
-        --     goto_next_start = {
-        --       [']m'] = '@function.outer',
-        --       [']]'] = '@class.outer',
-        --     },
-        --     goto_next_end = {
-        --       [']M'] = '@function.outer',
-        --       [']['] = '@class.outer',
-        --     },
-        --     goto_previous_start = {
-        --       ['[m'] = '@function.outer',
-        --       ['[['] = '@class.outer',
-        --     },
-        --     goto_previous_end = {
-        --       ['[M'] = '@function.outer',
-        --       ['[]'] = '@class.outer',
-        --     },
-        --   },
-        --   swap = {
-        --     enable = true,
-        --     swap_next = {
-        --       ['<leader>a'] = '@parameter.inner',
-        --     },
-        --     swap_previous = {
-        --       ['<leader>A'] = '@parameter.inner',
-        --     },
-        --   },
-        -- },
+        textobjects = {
+          select = {
+            enable = true,
+            lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
+            keymaps = {
+              -- You can use the capture groups defined in textobjects.scm
+              ['aa'] = '@parameter.outer',
+              ['ia'] = '@parameter.inner',
+              ['af'] = '@function.outer',
+              ['if'] = '@function.inner',
+              ['ac'] = '@class.outer',
+              ['ic'] = '@class.inner',
+            },
+          },
+          move = {
+            enable = true,
+            set_jumps = true, -- whether to set jumps in the jumplist
+            goto_next_start = {
+              [']m'] = '@function.outer',
+              [']]'] = '@class.outer',
+            },
+            goto_next_end = {
+              [']M'] = '@function.outer',
+              [']['] = '@class.outer',
+            },
+            goto_previous_start = {
+              ['[m'] = '@function.outer',
+              ['[['] = '@class.outer',
+            },
+            goto_previous_end = {
+              ['[M'] = '@function.outer',
+              ['[]'] = '@class.outer',
+            },
+          },
+          swap = {
+            enable = true,
+            swap_next = {
+              ['<leader>a'] = '@parameter.inner',
+            },
+            swap_previous = {
+              ['<leader>A'] = '@parameter.inner',
+            },
+          },
+        },
       }
 
       -- [[ Highlight on yank ]]
@@ -90,5 +102,10 @@ return {
         pattern = '*',
       })
     end
+  },
+
+  {
+    'NMAC427/guess-indent.nvim',
+    config = function() require('guess-indent').setup {} end,
   }
 }

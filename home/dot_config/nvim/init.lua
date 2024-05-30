@@ -12,7 +12,11 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+
 vim.loader.enable()
+
+-- Load Vimfiles
+-- vim.cmd('source lua/vimscripts/php/indent.vim')
 
 require('dieal.core')
 require('dieal.lazy')

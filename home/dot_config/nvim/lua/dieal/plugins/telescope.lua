@@ -11,7 +11,6 @@ return {
     local telescope = require("telescope")
     local builtin = require("telescope.builtin")
     local actions = require("telescope.actions")
-    local fb_actions = require "telescope._extensions.file_browser.actions"
 
     telescope.setup({
       defaults = {
@@ -32,7 +31,7 @@ return {
       }
     })
 
-    -- To get telescope-file-browser loaded and working with telescope,
+    --[[ -- To get telescope-file-browser loaded and working with telescope,
     -- you need to call load_extension, somewhere after setup function:
     require("telescope").load_extension "file_browser"
 
@@ -49,7 +48,7 @@ return {
       "<space>bb",
       ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
       { noremap = true, desc = "File [B]rowser from current [B]uffer"}
-    )
+    ) ]]
 
     -- -- open file_browser with the path of the current buffer
     -- vim.api.nvim_set_keymap(

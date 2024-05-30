@@ -3,3 +3,4 @@ make
 npm
 fzf
 gcc
+ripgrep
