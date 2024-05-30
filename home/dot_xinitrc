@@ -1,4 +1,5 @@
 setxkbmap -layout "it" -option caps:escape &
+xdg-settings set default-web-browser firefox.desktop &
 nm-applet &
 /usr/lib/kdeconnectd &
 redshift -l 41.89193:12.51133 &
