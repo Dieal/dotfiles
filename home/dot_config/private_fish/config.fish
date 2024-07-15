@@ -34,6 +34,8 @@ set -gx MOZ_USE_XINPUT2 1 # Touchpad Support
 
 # Paths
 fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.local/bin/flutter/bin
+fish_add_path $HOME/.config/composer/vendor/bin
 
 
 # --- Abbreviations ---
@@ -59,7 +61,7 @@ alias ls='eza'
 # ====================== #
 # ------ Bindings ------ #
 # ====================== #
-bind \cs "source ~/.config/fish/config.fish"
+bind \cs "source ~/.config/fish/config.fish" # Source Fish Config
 
 
 # ====================== #

@@ -28,35 +28,8 @@ return {
           theme = 'ivy',
           hijack_netrw = true, -- disables netrw and use telescope-file-browser in its place
         }
-      }
+      },
     })
-
-    --[[ -- To get telescope-file-browser loaded and working with telescope,
-    -- you need to call load_extension, somewhere after setup function:
-    require("telescope").load_extension "file_browser"
-
-    vim.api.nvim_set_keymap(
-      "n",
-      "<space>br",
-      ":Telescope file_browser<CR>",
-      { noremap = true, desc = "File [B]rowser from [R]oot" }
-    )
-
-    -- open file_browser with the path of the current buffer
-    vim.api.nvim_set_keymap(
-      "n",
-      "<space>bb",
-      ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
-      { noremap = true, desc = "File [B]rowser from current [B]uffer"}
-    ) ]]
-
-    -- -- open file_browser with the path of the current buffer
-    -- vim.api.nvim_set_keymap(
-    --   "n",
-    --   "<space>fb",
-    --   ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
-    --   { noremap = true }
-    -- )
 
     -- Enable telescope fzf native, if installed
     pcall(telescope.load_extension, 'fzf')
@@ -75,12 +48,15 @@ return {
       })
     end, { desc = '[/] Fuzzily search in current buffer' })
 
+    -- To hide specific folders (e.g node_modules), add it to .gitignore (there needs to be a git repo), 
+    -- so that ripgrep will ignore it
     vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = 'Search [G]it [F]iles' })
     vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
     vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
     vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
     vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
     vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
+    vim.keymap.set('n', '<leader>sls', builtin.lsp_document_symbols, { desc = '[S]earch [L]sp [S]ymbols' })
     vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = '[S]earch  [B]uffers' })
     vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch  [K]eybindings' })
 

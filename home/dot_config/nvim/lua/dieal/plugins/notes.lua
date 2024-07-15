@@ -45,6 +45,17 @@ return {
     lazy = true,
   },
 
+  {
+    "tadmccorkle/markdown.nvim",
+    ft = "markdown", -- or 'event = "VeryLazy"'
+    opts = {
+      -- configuration here or empty for defaults
+    },
+    config = function(_, opts)
+      require("markdown").setup(opts)
+    end,
+  },
+
   -- Obsidian Integration
   {
     'epwalsh/obsidian.nvim',

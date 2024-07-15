@@ -40,13 +40,11 @@ return {
         marksman = {},
         ansiblels = {},
         yamlls = {},
+        clangd = {},
         emmet_ls = {
           filetypes = { "html", "javascript", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte", "astro" },
         },
         tailwindcss = {},
-        intelephense = {
-          filetypes = { "php" }
-        },
         phpactor = {
           filetypes = { "php" },
         },

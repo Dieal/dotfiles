@@ -13,7 +13,7 @@ vim.opt.relativenumber = true
 vim.o.autochdir = true
 
 -- Scroll
-vim.opt.scrolloff = 8;
+vim.opt.scrolloff = 0;
 
 -- Tab indentation
 vim.opt.tabstop = 4
@@ -25,6 +25,9 @@ vim.opt.smartindent = true
 
 -- Wrapping
 vim.opt.wrap = false;
+
+-- Virtual Editing, allows the cursor to move after the ending of a long line
+vim.o.virtualedit = "all";
 
 -- Enable mouse mode
 vim.o.mouse = 'a'

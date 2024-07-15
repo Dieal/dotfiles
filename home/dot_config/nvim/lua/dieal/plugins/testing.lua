@@ -4,13 +4,16 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
+      "nvim-neotest/nvim-nio",
       "marilari88/neotest-vitest",
-      "sidlatau/neotest-dart",
       "nvim-treesitter/nvim-treesitter",
       "nvim-neotest/neotest-jest",
       "nvim-neotest/neotest-vim-test",
+      "olimorris/neotest-phpunit",
     },
     enabled = false,
+    --[[ lazy = true,
+    ft = { 'js', 'php' }, ]]
     config = function ()
       local neotest = require('neotest')
 
@@ -19,7 +22,8 @@ return {
         adapters = {
           require("neotest-jest"),
           require("neotest-vitest"),
-          require("neotest-dart"),
+          require("neotest-phpunit"),
+          -- require("neotest-dart"),
           require("neotest-vim-test")({
             ignore_file_types = { "python", "vim", "lua" },
           }),

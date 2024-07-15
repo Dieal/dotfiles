@@ -15,19 +15,19 @@ return {
           ["<C-h>"] = "actions.toggle_hidden",
           ["C-p"] = "actions.preview",
           ["_"] = "actions.open_cwd",
+          ["<C-l>"] = "actions.refresh",
         }
       })
 
       -- Keybindings
       nmap("<leader>bb", "<CMD>Oil<CR>", "[B]rowse Current [B]uffer Directory")
       nmap("<leader>br", "<CMD>Oil" .. vim.fn.getcwd() .. "<CR>", "[B]rowse [R]oot Directory")
-      nmap("<leader>br", "<CMD>Oil" .. vim.fn.getcwd() .. "<CR>", "[B]rowse [R]oot Directory")
     end,
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
 
-  {
+  --[[ {
     'nvim-tree/nvim-tree.lua',
     config = function()
       require("nvim-tree").setup()
@@ -36,5 +36,5 @@ return {
       nmap("<leader>tt", "<CMD>NvimTreeToggle<CR>", "[T]oggle Neovim [T]ree")
     end
   }
-
+]]
 }

@@ -6,7 +6,7 @@ vim.g.maplocalleader = ' '
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Yanking
+-- Yanking to system clipboard
 vim.keymap.set("n", '<leader>y', '"+yy', { desc = "Yank to system clipboard "})
 vim.keymap.set("v", '<leader>y', '"+y', { desc = "Yank to system clipboard "})
 
@@ -14,14 +14,14 @@ vim.keymap.set("v", '<leader>y', '"+y', { desc = "Yank to system clipboard "})
 vim.keymap.set("n", '<leader>cp', "<CMD>s/\\<./\\u&/g<CR>", { desc = "[C]a[P]italize Each Word in line"})
 vim.keymap.set("v", '<leader>cp', "<CMD>s/\\<./\\u&/g<CR>", { desc = "[C]a[P]italize Each Word in selection"})
 
+
+-- Keymaps for better default experience
 -- Center Cursor
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- Keymaps for better default experience
--- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set({ 'n', 'v' }, 'Q', '<Nop>', { silent = true })
 
@@ -45,3 +45,7 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Go to right split window' })
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Go to left split window' })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Go to higher split window' })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Go to lower split window' })
+
+-- TABS
+vim.keymap.set('n', '<leader>tn', '<CMD>tabnew<CR>', { desc = '[T]ab [N]ew' })
+vim.keymap.set('n', '<leader>tc', '<CMD>tabclose<CR>', { desc = '[T]ab [C]lose' })

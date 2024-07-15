@@ -7,8 +7,11 @@ return {
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
-  -- Saves / Restores Sessions
-  'tpope/vim-obsession',
+  -- Notifications
+  'rcarriga/nvim-notify',
+
+  -- -- Saves / Restores Sessions
+  -- 'tpope/vim-obsession',
 
   -- Auto pair brackets
   {
@@ -17,13 +20,49 @@ return {
     opts = {} -- this is equalent to setup({}) function
   },
 
+  -- Inline Folding (HTML and Tailwind)
+  {
+    "malbertzard/inline-fold.nvim",
+    lazy = true,
+    ft = {'php', 'html', 'blade'},
+    config = function ()
+      require('inline-fold').setup({
+        defaultPlaceholder = "…",
+        queries = {
+          -- Some examples you can use
+          html = {
+            { pattern = 'class="([^"]*)"' }, -- classes in html
+            { pattern = 'href="(.-)"' }, -- hrefs in html
+            { pattern = 'src="(.-)"' }, -- HTML img src attribute
+          },
+          php = {
+            { pattern = 'class="([^"]*)"' }, -- classes in html
+            { pattern = 'href="(.-)"' }, -- hrefs in html
+            { pattern = 'src="(.-)"' }, -- HTML img src attribute
+          },
+          blade = {
+            { pattern = 'class="([^"]*)"' }, -- classes in html
+            { pattern = 'href="(.-)"' }, -- hrefs in html
+            { pattern = 'src="(.-)"' }, -- HTML img src attribute
+          },
+        },
+      })
+
+      vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
+        pattern = { '*.html', '*.tsx', '*.php' },
+        callback = function(_)
+          if not require('inline-fold.module').isHidden then
+            vim.cmd('InlineFoldToggle')
+          end
+        end
+      })
+    end,
+  },
+
   { 'nvim-tree/nvim-web-devicons' },
 
   -- Terminal
   { 'numToStr/FTerm.nvim', },
-
-  -- -- Discord Rich Presence
-  -- { 'andweeb/presence.nvim' },
 
   -- Abolish.vim, to keep case when substituting words
   { 'tpope/vim-abolish' },
@@ -35,9 +74,20 @@ return {
       'nvim-treesitter/nvim-treesitter',
     },
     config = function()
-      require('nvim-ts-autotag').setup();
+      require('nvim-ts-autotag').setup({
+        per_filetype = {
+          ["blade"] = {
+            enable_close = true,
+          },
+        },
+      });
     end
   },
+
+  {
+    'mg979/vim-visual-multi',
+  },
+
 
   {
     -- Add indentation guides even on blank lines
@@ -63,14 +113,5 @@ return {
         }
       }
     end
-  },
-
-  -- { 'jakewvincent/mkdnflow.nvim' },
-
-  {
-      "iamcco/markdown-preview.nvim",
-      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-      ft = { "markdown" },
-      build = function() vim.fn["mkdp#util#install"]() end,
   },
 }
