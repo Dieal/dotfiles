@@ -14,6 +14,7 @@ return {
   {
     "ellisonleao/glow.nvim",
 
+    enabled = false,
     config = function ()
 
       require('glow').setup({
@@ -45,6 +46,7 @@ return {
     lazy = true,
   },
 
+  -- Markdown Utils
   {
     "tadmccorkle/markdown.nvim",
     ft = "markdown", -- or 'event = "VeryLazy"'
@@ -54,6 +56,19 @@ return {
     config = function(_, opts)
       require("markdown").setup(opts)
     end,
+  },
+
+  -- Awesome Markdown Preview Plugin
+  {
+    "OXY2DEV/markview.nvim",
+
+    dependencies = {
+      -- You may not need this if you don't lazy load
+      -- Or if the parsers are in your $RUNTIMEPATH
+      "nvim-treesitter/nvim-treesitter",
+
+      "nvim-tree/nvim-web-devicons"
+    },
   },
 
   -- Obsidian Integration
