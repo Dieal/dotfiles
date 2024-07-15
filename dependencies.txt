@@ -1,0 +1,13 @@
+git
+ripgrep
+npm
+cargo
+go
+node
+fd
+tar
+gcc
+curl
+unzip
+tar
+gzip
