@@ -11,3 +11,7 @@ curl
 unzip
 tar
 gzip
+alsa-utils
+polybar
+rofi
+flameshot

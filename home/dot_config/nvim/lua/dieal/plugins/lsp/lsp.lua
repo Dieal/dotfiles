@@ -38,15 +38,17 @@ return {
         dockerls = {},
         cssls = {},
         marksman = {},
+        jedi_language_server = {},
         ansiblels = {},
         yamlls = {},
+        vuels = {},
         clangd = {},
         emmet_ls = {
-          filetypes = { "html", "javascript", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte", "astro" },
+          filetypes = { "html", "javascript", "blade", "php", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte", "astro" },
         },
         tailwindcss = {},
         phpactor = {
-          filetypes = { "php" },
+          filetypes = { "php", "blade" },
         },
         html = {
           filetypes = { "html" },

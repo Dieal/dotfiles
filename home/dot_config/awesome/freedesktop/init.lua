@@ -8,6 +8,13 @@
       * (c) 2009-2015, Antonio Terceiro
 
 --]]
+local _dbus = dbus; dbus = nil
+local naughty = require("naughty")
+dbus = _dbus
+
+if dbus then
+    naughty.dbus = require("naughty.dbus")
+end
 
 return {
     desktop  = require("freedesktop.desktop"),
